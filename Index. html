@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Backbenchers Cafe | Bettiah, Bihar</title>
+
+  <meta name="description" content="Discover The Backbenchers Cafe in Subhash Nagar, Bettiah. Find our location, contact details and menu information.">
+
+  <meta name="theme-color" content="#2b211b">
+
+  <style>
+    :root {
+      --dark: #2b211b;
+      --brown: #a9683a;
+      --orange: #f2a33a;
+      --cream: #fff9f0;
+      --white: #ffffff;
+      --muted: #6f665f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 249, 240, 0.97);
+      border-bottom: 1px solid #eadfd2;
+    }
+
+    nav {
+      max-width: 1100px;
+      min-height: 78px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      font-family: Georgia, serif;
+      font-size: 25px;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--brown);
+      letter-spacing: 3px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 6px;
+      background: var(--dark);
+      color: white;
+      border: 2px solid var(--dark);
+      font-weight: 700;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      background: transparent;
+      color: var(--dark);
+      border-color: #d9c8b8;
+    }
+
+    .hero {
+      max-width: 1100px;
+      min-height: 580px;
+      margin: auto;
+      padding: 75px 24px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      color: var(--brown);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5.5vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: var(--brown);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-image {
+      min-height: 420px;
+      border-radius: 180px 180px 14px 14px;
+      background: #e7d4bf;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    section {
+      padding: 75px 24px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 38px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 10px 0 15px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p,
+    .about-copy {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #eadfd2;
+    }
+
+    .about-copy p {
+      margin-bottom: 20px;
+    }
+
+    .menu-section {
+      background: #f3e8da;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 27px 22px;
+      border: 1px solid #eee2d5;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 9px;
+      background: #eadfd2;
+    }
+
+    .contact-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .contact-section .section-heading p {
+      color: #ded0c3;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-card {
+      border: 1px solid #55473d;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .contact-card p {
+      color: #ded0c3;
+      margin: 8px 0 20px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card .button {
+      background: var(--orange);
+      color: var(--dark);
+      border-color: var(--orange);
+    }
+
+    .contact-card .button:hover {
+      background: white;
+      border-color: white;
+    }
+
+    .final-cta {
+      text-align: center;
+    }
+
+    .final-cta p {
+      color: var(--muted);
+      margin: 15px 0 25px;
+    }
+
+    footer {
+      padding: 30px 20px 90px;
+      background: #211912;
+      color: #e9ded3;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .mobile-bar {
+      display: none;
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      nav {
+        padding: 12px 16px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 52px 22px;
+        gap: 30px;
+      }
+
+      h1 {
+        font-size: clamp(39px, 10vw, 57px);
+      }
+
+      .hero-image,
+      .hero-image img {
+        min-height: 300px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .gallery img {
+        height: 160px;
+      }
+
+      section {
+        padding: 58px 20px;
+      }
+
+      .mobile-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        background: var(--dark);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      .mobile-bar a {
+        text-align: center;
+        padding: 15px 8px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .mobile-bar a + a {
+        color: var(--orange);
+        border-left: 1px solid #55473d;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Open Daily &nbsp; • &nbsp; 7 AM – 10 PM &nbsp; • &nbsp; Bettiah, Bihar
+  </div>
+
+  <header>
+    <nav>
+      <a href="#home" class="brand" aria-label="The Backbenchers Cafe home">
+        <span class="brand-icon">B</span>
+        <span>
+          THE BACKBENCHERS
+          <small>CAFE</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="button" href="tel:+916206356052">Call Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Bettiah's Easygoing Corner</div>
+
+        <h1>
+          Good Food.<br>
+          <span>Good Coffee.</span><br>
+          No Front-Bench Energy.
+        </h1>
+
+        <p>
+          A laid-back cafe in Subhash Nagar, Bettiah, for coffee,
+          food, conversations and time well spent.
+        </p>
+
+        <div class="actions">
+          <a class="button"
+             href="https://www.google.com/maps/search/?api=1&query=The+Backbenchers+Cafe+Bettiah">
+            Get Directions ↗
+          </a>
+
+          <a class="button button-light" href="#menu">
+            View Menu ↓
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80"
+          alt="Cafe interior with a relaxed atmosphere"
+          fetchpriority="high">
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <img
+          class="about-image"
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+          alt="Coffee being prepared in a cafe"
+          loading="lazy">
+
+        <div class="about-copy">
+          <div class="eyebrow">A place to slow down</div>
+          <h2>A Cafe With Its Own Kind of Vibe</h2>
+
+          <p>
+            The Backbenchers Cafe is built around a simple idea:
+            good food, good company and a place where you can relax
+            without making a big occasion out of it.
+          </p>
+
+          <p>
+            Drop in for a quick bite, meet friends over coffee,
+            or enjoy a little time away from your busy day.
+          </p>
+
+          <a class="button" href="#contact">Find Our Cafe</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Explore the menu</div>
+          <h2>Something For The Craving</h2>
+          <p>
+            Explore our menu at the cafe. Verified menu items
+            and prices can be added here when available.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">☕</div>
+            <h3>Coffee & Hot Beverages</h3>
+            <p>Ask the cafe for the current beverage menu.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🥤</div>
+            <h3>Cold Beverages</h3>
+            <p>Ask about the currently available options.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🍽️</div>
+            <h3>Snacks & Food</h3>
+            <p>Contact the cafe for the latest menu and prices.</p>
+          </article>
+        </div>
+
+        <p class="note">
+          Menu items and prices have not yet been verified.
+          Please contact the cafe for current availability.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">A little cafe inspiration</div>
+          <h2>Take A Look Around</h2>
+          <p>
+            Sample cafe photography for this website demo.
+            These images are not confirmed photographs of the business.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <img
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80"
+            alt="Example cafe interior"
+            loading="lazy">
+
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+            alt="Example coffee photography"
+            loading="lazy">
+
+          <img
+            src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=600&q=80"
+            alt="Example cafe seating"
+            loading="lazy">
+
+          <img
+            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80"
+            alt="Example coffee preparation"
+            loading="lazy">
+
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80"
+            alt="Example coffee serving"
+            loading="lazy">
+
+          <img
+            src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80"
+            alt="Example coffee shop"
+            loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Come say hello</div>
+          <h2>Find Your Way to Backbenchers</h2>
+          <p>
+            Planning a visit? Check the location and contact the cafe
+            before travelling if you need any additional information.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Visit Us</h3>
+            <p>
+              QGV9+5XC, SH 54, Subhash Nagar,<br>
+              Bettiah, Purbi Kargahia,<br>
+              Bihar 845438, India
+            </p>
+
+            <a class="button"
+               href="https://www.google.com/maps/search/?api=1&query=QGV9%2B5XC%2C+Subhash+Nagar%2C+Bettiah%2C+Bihar+845438"
+               target="_blank"
+               rel="noopener noreferrer">
+              Open Google Maps ↗
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>Call the Cafe</h3>
+            <p>
+              Daily: 7 AM – 10 PM<br>
+              Phone: +91 62063 56052
+            </p>
+
+            <a class="button" href="tel:+916206356052">
+              Call Now ☎
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="eyebrow">Your next cafe break</div>
+        <h2>Good Food. Good Company.</h2>
+        <p>Come find your corner at The Backbenchers Cafe, Bettiah.</p>
+
+        <a class="button"
+           href="https://www.google.com/maps/search/?api=1&query=The+Backbenchers+Cafe+Bettiah"
+           target="_blank"
+           rel="noopener noreferrer">
+          Get Directions ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>THE BACKBENCHERS CAFE</strong>
+    <p>Subhash Nagar, Bettiah, Bihar 845438</p>
+    <p>Daily, 7 AM – 10 PM</p>
+    <p style="margin-top:15px">
+      © <span id="year"></span> The Backbenchers Cafe
+    </p>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="tel:+916206356052">☎ &nbsp; CALL</a>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=The+Backbenchers+Cafe+Bettiah"
+      target="_blank"
+      rel="noopener noreferrer">
+      ↗ &nbsp; DIRECTIONS
+    </a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
